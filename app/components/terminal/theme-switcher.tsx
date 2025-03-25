@@ -25,9 +25,9 @@ export function ThemeSwitcher({ currentTheme, onThemeChange }: ThemeSwitcherProp
   };
 
   return (
-    <div className="flex items-center space-x-2 mb-4">
+    <div className="flex items-center space-x-2 mb-4 flex-wrap">
       <span className="text-sm">Theme:</span>
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 flex-wrap gap-2">
         {THEMES.map((theme) => (
           <button
             key={theme.id}

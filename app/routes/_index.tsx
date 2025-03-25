@@ -8,7 +8,7 @@ import "../styles/themes.css";
 
 export default function Index() {
   const [history, setHistory] = useState<string[]>([]);
-  const [theme, setTheme] = useState("matrix");
+  const [theme, setTheme] = useState("solarized");
   const terminalRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
@@ -38,14 +38,16 @@ export default function Index() {
   return (
     <div className={`flex min-h-screen terminal-theme theme-${theme}`}>
       <Sidebar />
-      <div className="flex-1 p-4">
+      <main className="flex-1 flex flex-col h-screen p-4 overflow-hidden">
         <ThemeSwitcher currentTheme={theme} onThemeChange={setTheme} />
-        <Terminal
-          ref={terminalRef}
-          history={history}
-          onCommand={handleCommand}
-        />
-      </div>
+        <div className="flex-1 min-h-0"> {/* This ensures proper scrolling */}
+          <Terminal
+            ref={terminalRef}
+            history={history}
+            onCommand={handleCommand}
+          />
+        </div>
+      </main>
     </div>
   );
 }
