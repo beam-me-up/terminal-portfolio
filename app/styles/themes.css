@@ -1,0 +1,58 @@
+/* Base theme styles */
+.theme-matrix {
+    --primary: #00ff00;
+    --secondary: #003300;
+    --background: #000000;
+    --text: #00ff00;
+    --border: #00ff00;
+  }
+  
+  .theme-cyberpunk {
+    --primary: #f0fb3b;
+    --secondary: #ff00ff;
+    --background: #000000;
+    --text: #f0fb3b;
+    --border: #ff00ff;
+  }
+  
+  .theme-dracula {
+    --primary: #bd93f9;
+    --secondary: #44475a;
+    --background: #282a36;
+    --text: #f8f8f2;
+    --border: #bd93f9;
+  }
+  
+  .theme-solarized {
+    --primary: #2aa198;
+    --secondary: #073642;
+    --background: #002b36;
+    --text: #839496;
+    --border: #2aa198;
+  }
+  
+  .theme-retro {
+    --primary: #ff8c00;
+    --secondary: #8b4513;
+    --background: #000000;
+    --text: #ffa500;
+    --border: #ff8c00;
+  }
+  
+  .terminal-theme {
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .terminal-theme .border-theme {
+    border-color: var(--border);
+  }
+  
+  .terminal-theme .text-theme {
+    color: var(--text);
+  }
+  
+  .terminal-theme .hover-theme:hover {
+    color: var(--primary);
+  }
+  

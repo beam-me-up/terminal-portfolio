@@ -16,7 +16,7 @@ export const Terminal = forwardRef<HTMLDivElement, TerminalProps>(
     useEffect(() => {
       const commands = [
         "help",
-		"resume",
+        "resume",
         "about",
         "experience",
         "education",
@@ -45,12 +45,12 @@ export const Terminal = forwardRef<HTMLDivElement, TerminalProps>(
     return (
       <div
         ref={ref}
-        className="h-full overflow-auto rounded-lg border border-green-500 bg-black p-10"
+        className="h-full overflow-auto rounded-lg border border-theme bg-background p-4"
         tabIndex={0}
       >
         <div className="mb-4 text-sm">
           <p>Welcome to Dhinesh Kumar's Terminal Portfolio</p>
-          <p>Type 'help' to see available commands</p>
+          <p>Type 'help' to see available commands or 'resume' to view full resume</p>
         </div>
 
         <History items={history} />

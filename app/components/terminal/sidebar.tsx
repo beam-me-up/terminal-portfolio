@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { GitHubIcon } from "./icons/github-icon";
-import { LinkedInIcon } from "./icons/linkedin-icon";
+import { GitHubIcon, LinkedInIcon } from "./icons";
 
 const TITLES = [
   "Technical Architect",
@@ -43,7 +42,7 @@ export function Sidebar() {
   }, [currentText, isTyping, titleIndex]);
 
   return (
-    <div className="w-64 border-r border-green-500 p-4 font-mono">
+    <div className="w-64 border-r border-theme p-4 font-mono">
       <div className="mb-8">
         <h1 className="mb-2 text-2xl font-bold">Dhinesh Kumar</h1>
         <h2 className="h-6 text-lg">
@@ -58,7 +57,7 @@ export function Sidebar() {
             href="https://linkedin.com/in/dhineshravi" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-green-400 transition-colors duration-200"
+            className="hover-theme transition-colors duration-200"
             aria-label="LinkedIn Profile"
           >
             <LinkedInIcon className="w-6 h-6" />
@@ -68,7 +67,7 @@ export function Sidebar() {
             href="https://github.com/beam-me-up" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-green-400 transition-colors duration-200"
+            className="hover-theme transition-colors duration-200"
             aria-label="GitHub Profile"
           >
             <GitHubIcon className="w-6 h-6" />
@@ -77,7 +76,7 @@ export function Sidebar() {
 
         <a 
           href="mailto:dhinesh.ravi@gmail.com"
-          className="flex items-center space-x-2 hover:text-green-400"
+          className="flex items-center space-x-2 hover-theme"
         >
           <span className="text-2xl">✉</span>
           <span className="text-sm">dhinesh.ravi@gmail.com</span>
@@ -88,8 +87,8 @@ export function Sidebar() {
           <span className="text-sm">Bangalore</span>
         </div>
 
-        <div className="mt-8 border-t border-green-500 pt-4">
-          <p className="text-sm text-green-400">Type 'help' to see available commands</p>
+        <div className="mt-8 border-t border-theme pt-4">
+          <p className="text-sm text-theme">Type 'help' to see available commands</p>
         </div>
       </div>
     </div>
